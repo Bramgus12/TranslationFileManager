@@ -1,0 +1,74 @@
+{
+  "root": true,
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/no-shadow": ["error"],
+        "no-shadow": "off",
+        "no-undef": "off"
+      }
+    }
+  ],
+  "extends": [
+    "@react-native-community",
+    "plugin:react/recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "plugin:react/jsx-runtime"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "project": ["tsconfig.json"]
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "linebreak-style": 0,
+    "import/imports-first": 0,
+    "import/newline-after-import": 0,
+    "import/no-dynamic-require": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-named-as-default": 0,
+    "import/extensions": 0,
+    "import/no-named-as-default-member": 0,
+    "import/no-webpack-loader-syntax": 0,
+    "import/prefer-default-export": 0,
+    "prettier/prettier": 0,
+    "react/function-component-definition": 0,
+    "indent": "off",
+    "react/jsx-indent": [
+      "error",
+      4,
+      {
+        "checkAttributes": true,
+        "indentLogicalExpressions": true
+      }
+    ],
+    "no-use-before-define": 0,
+    "react/jsx-filename-extension": 0,
+    "@typescript-eslint/indent": ["error", 4],
+    "react/jsx-indent-props": 0,
+    "quotes": "off",
+    "@typescript-eslint/quotes": [
+      "error",
+      "double",
+      { "allowTemplateLiterals": true }
+    ],
+    "react/destructuring-assignment": 0,
+    "react/prop-types": 0,
+    "import/no-unresolved": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  }
+}
